@@ -1,0 +1,104 @@
+.step-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 274px;
+    height: 568px;
+}
+
+.bg-desktop,
+.bg-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.bg-mobile {
+    display: none;
+}
+
+.progress-steps {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.step-btn {
+    border-radius: 50%;
+    border: 1px solid #f0f5ff;
+    background-color: transparent;
+    color: #f0f5ff;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.step-btn:hover, .active {
+    border-radius: 50%;
+    border: 1px solid #f0f5ff;
+    background-color: #bfe2fd;
+    color: #02295a;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.step-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step-info h2{
+    font-weight: 400;
+    color: #adbeff;
+}
+
+.step-info h3 {
+    font-weight: 700;
+    color: #fafbff;
+}
+
+@media screen and (max-width: 768px) { 
+    .step-nav {
+        width: 100%;
+        height: auto;
+    }
+    
+    .bg-desktop {
+        display: none;
+    }
+
+    .bg-mobile {
+        display: block;
+    }
+
+    .progress-steps {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.875rem;
+    }
+
+    .step-btn, .step-btn:hover, .active {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .step-info {
+        display: none;
+    }
+}
