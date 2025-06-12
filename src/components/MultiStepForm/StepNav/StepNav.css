@@ -84,6 +84,8 @@
 
     .bg-mobile {
         display: block;
+        width: 100%;
+        height: auto;
     }
 
     .progress-steps {
