@@ -1,4 +1,11 @@
-const SelectPlanStep: React.FC = () => {
+import React from "react";
+
+type SelectPlanProps = {
+  currentStep: number;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const SelectPlanStep: React.FC<SelectPlanProps> = () => {
 
     return(
     <form className="personal-info">

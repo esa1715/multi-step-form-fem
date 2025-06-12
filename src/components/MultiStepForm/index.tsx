@@ -20,7 +20,7 @@ const MultiStepForm: React.FC = () => {
     const renderStep = () => {
         switch (currentStep) {
             case 1:
-                return <YourInfo currentStep={currentStep} setCurrentStep={setCurrentStep} />;
+                return <YourInfo currentStep={currentStep} setCurrentStep={setCurrentStep} name={""} email={""} phone={""} />;
             case 2:
                 return <SelectPlan currentStep={currentStep} setCurrentStep={setCurrentStep} />
             case 3:

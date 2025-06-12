@@ -1,4 +1,11 @@
-const AddOns: React.FC = () => {
+import React from "react";
+
+type AddOnsProps = {
+  currentStep: number;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const AddOns: React.FC<AddOnsProps> = () => {
 
     return(
     <form className="personal-info">

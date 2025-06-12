@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import './YourInfo.css'
 
-interface User {
+interface YourInfoProps {
   name: string;
   email: string;
   phone: string;
+  currentStep: number;
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const PersonalInfoStep: React.FC<User> = () => {
+import React from "react";
+
+const PersonalInfoStep: React.FC<YourInfoProps> = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
