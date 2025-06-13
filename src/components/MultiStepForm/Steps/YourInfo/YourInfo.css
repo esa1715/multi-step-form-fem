@@ -93,7 +93,7 @@
         z-index: 1;
         padding: 0;
         position: absolute;
-        top: 15%;
+        top: 17.5%;
         background-color: #ffffff;
         width: 90%;
         border-radius: 10px;
@@ -102,7 +102,11 @@
     }
 
     .personal-info input, .user-input-info {
-        width: 90%;
+        width: 100%;
+    }
+
+    .personal-info input {
+        padding: 0.75rem;
     }
 
     .your-info-btns {
