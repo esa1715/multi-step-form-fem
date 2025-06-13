@@ -9,14 +9,6 @@ import Summary from "./Steps/Summary";
 const MultiStepForm: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(1);
 
-    function goBack() {
-        setCurrentStep(prev => prev - 1);
-    }
-
-    function nextStep() {
-        setCurrentStep(prev => prev + 1);
-    }
-
     const renderStep = () => {
         switch (currentStep) {
             case 1:
@@ -36,10 +28,6 @@ const MultiStepForm: React.FC = () => {
             <StepNav currentStep={currentStep} setCurrentStep={setCurrentStep}/>
             <div className="step-container">
                 {renderStep()}
-                <div className="steps-btns">
-                {currentStep > 1 && <button className="back-btn" onClick={goBack}>Go back</button>}
-                {currentStep < 4 && <button className="next-btn" onClick={nextStep}>Next Step</button>}
-                </div>
             </div>
         </main>
     );

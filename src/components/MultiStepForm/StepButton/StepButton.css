@@ -1,0 +1,31 @@
+.next-btn {
+    background-color: #02295a;
+    color: #f0f5ff;
+}
+    
+.next-btn:hover {
+    background-color: rgba(2, 41, 90, 0.85);
+    transition: 0.25s;
+}
+
+.next-btn, .back-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.back-btn {
+    color: #9699ab;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    color: #02295a;
+    transition: 0.25s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .next-btn, .back-btn {
+        padding: 1rem;
+    }
+}

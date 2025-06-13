@@ -2,8 +2,20 @@
     display: flex;
     flex-direction: column;
     width: 28.125rem;
-    padding-top: 1.5rem;
+    padding-top: 1.75rem;
     gap: 0.875rem;
+}
+
+.your-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.step-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
 .personal-info h2 {
@@ -22,13 +34,58 @@
     color: #02295a;
 }
 
-.personal-info input {
+.input {
     border: 1px solid #d6d9e6;
     padding: 1rem;
     width: 450px;
     border-radius: 10px;
     color: #02295a;
     font-weight: 500;
+}
+
+.input-error {
+    border: 1px solid #ed3548;
+    padding: 1rem;
+    width: 450px;
+    border-radius: 10px;
+    color: #02295a;
+    font-weight: 500;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-input-info {
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-error-msg {
+    color: #ed3548;
+    font-weight: 500;
+}
+
+
+.your-info-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 450px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 6.25rem 1.5rem 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -47,4 +104,12 @@
     .personal-info input {
         width: 90%;
     }
+
+    .your-info-btns {
+        position: fixed;
+        width: 100%;
+        padding: 1rem;
+        background-color: #ffffff;
+    }
+
 }
