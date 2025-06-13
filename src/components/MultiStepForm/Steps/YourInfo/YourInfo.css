@@ -101,7 +101,7 @@
         gap: 0.875rem;
     }
 
-    .personal-info input {
+    .personal-info input, .user-input-info {
         width: 90%;
     }
 
@@ -111,5 +111,4 @@
         padding: 1rem;
         background-color: #ffffff;
     }
-
 }
