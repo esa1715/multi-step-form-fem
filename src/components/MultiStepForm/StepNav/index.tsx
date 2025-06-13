@@ -9,10 +9,17 @@ interface StepNavProps {
 }
 
 const StepNav: React.FC<StepNavProps> = ({currentStep, setCurrentStep}) => {
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 885);
+  
+  const steps = [
+    { number: 1, title: 'YOUR INFO' },
+    { number: 2, title: 'SELECT PLAN' },
+    { number: 3, title: 'ADD-ONS' },
+    { number: 4, title: 'SUMMARY' },
+  ];
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => setIsMobile(window.innerWidth <= 885);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -26,34 +33,20 @@ const StepNav: React.FC<StepNavProps> = ({currentStep, setCurrentStep}) => {
         )}
 
       <ul className="progress-steps">
-        <li className="step">
-          <button onClick={() => setCurrentStep(1)} className={currentStep === 1 ? 'active' : 'step-nav-btn'} >1</button>
+        {steps.map((step) => (
+          <li key={step.number} className="step">
+            <button
+              onClick={() => setCurrentStep(step.number)}
+              className={currentStep === step.number ? 'active' : 'step-nav-btn'}
+            >
+              {step.number}
+            </button>
           <div className="step-info">
-            <h2>STEP 1</h2>
-            <h3>YOUR INFO</h3>
+            <h2>STEP {step.number}</h2>
+            <h3>{step.title}</h3>
           </div>
-        </li>
-        <li className="step">
-          <button onClick={() => setCurrentStep(2)} className={currentStep === 2 ? 'active' : 'step-nav-btn'} >2</button>
-          <div className="step-info">
-            <h2>STEP 2</h2>
-            <h3>SELECT PLAN</h3>
-          </div>
-        </li>
-        <li className="step">
-          <button onClick={() => setCurrentStep(3)} className={currentStep === 3 ? 'active' : 'step-nav-btn'} >3</button>
-          <div className="step-info">
-            <h2>STEP 3</h2>
-            <h3>ADD-ONS</h3>
-          </div>
-        </li>
-        <li className="step">
-          <button onClick={() => setCurrentStep(4)} className={currentStep === 4 ? 'active' : 'step-nav-btn'} >4</button>
-          <div className="step-info">
-            <h2>STEP 4</h2>
-            <h3>SUMMARY</h3>
-          </div>
-        </li>
+          </li>
+        ))}
       </ul>
     </section>
   );

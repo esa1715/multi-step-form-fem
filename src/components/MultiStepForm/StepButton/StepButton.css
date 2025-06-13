@@ -24,7 +24,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 885px) {
     .next-btn, .back-btn {
         padding: 1rem;
     }
