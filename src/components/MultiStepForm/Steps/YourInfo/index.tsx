@@ -1,7 +1,7 @@
 import React from "react";
-import { useForm } from "react-hook-form"
-import './YourInfo.css'
+import { useForm } from "react-hook-form";
 import StepButton from "../../StepButton";
+import './YourInfo.css';
 
 interface YourInfoProps {
   name: string;

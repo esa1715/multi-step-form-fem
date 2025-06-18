@@ -1,0 +1,8 @@
+.progress-status {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.progress-status p {
+    color: #02295a;
+}

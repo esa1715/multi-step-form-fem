@@ -1,11 +1,11 @@
 .next-btn {
     background-color: #02295a;
     color: #f0f5ff;
+    transition: background-color 0.25s ease;
 }
     
 .next-btn:hover {
     background-color: rgba(2, 41, 90, 0.85);
-    transition: 0.25s;
 }
 
 .next-btn, .back-btn {
@@ -16,11 +16,11 @@
 .back-btn {
     color: #9699ab;
     font-weight: 500;
+    transition: color 0.25s ease;
 }
 
 .back-btn:hover {
     color: #02295a;
-    transition: 0.25s;
 }
 
 

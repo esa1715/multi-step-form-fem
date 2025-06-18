@@ -1,0 +1,69 @@
+.plan-toggle-container {
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #f0f5ff;
+    border-radius: 10px;
+}
+
+.plan-type {
+    color: #9699ab;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.plan-type-active {
+    color: #02295a;
+    font-weight: 500;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #02295a;
+  border-radius: 36px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+@media screen and (max-width: 885px) {
+  .plan-toggle-container {
+    width: 100%;  
+  }
+}
