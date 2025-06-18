@@ -5,12 +5,13 @@
 }
     
 .next-btn:hover {
-    background-color: rgba(2, 41, 90, 0.85);
+    background-color: rgba(2, 41, 90, 0.75);
 }
 
-.next-btn, .back-btn {
+.next-btn, .back-btn, .confirm-btn {
     padding: 1rem 1.5rem;
     border-radius: 10px;
+    width: 125px;
 }
 
 .back-btn {
@@ -23,9 +24,19 @@
     color: #02295a;
 }
 
+.confirm-btn {
+    background-color: #473dff;
+    color: #f0f5ff;
+    transition: background-color 0.25s ease;
+}
+
+.confirm-btn:hover {
+    background-color: rgba(71, 61, 255, 0.5);
+}
 
 @media screen and (max-width: 885px) {
-    .next-btn, .back-btn {
+    .next-btn, .back-btn, .confirm-btn {
         padding: 1rem;
+        border-radius: 6px;
     }
 }

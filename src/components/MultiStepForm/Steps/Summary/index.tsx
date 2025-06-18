@@ -1,13 +1,14 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
+import StepButton from "../../StepButton";
 
 type SummaryProps = {
   currentStep: number;
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const Summary: React.FC<SummaryProps> = () => {
+const Summary: React.FC<SummaryProps> = ({setCurrentStep}) => {
 
     return(
     <form className="personal-info">
@@ -20,6 +21,11 @@ const Summary: React.FC<SummaryProps> = () => {
           <FontAwesomeIcon icon={faGear} spin style={{color: " #9699ab",}} />
         </div>
         
+
+        <div className="step-btns">
+          <StepButton variant="back" onClick={() => setCurrentStep((prev) => prev - 1)}/>
+          <StepButton variant="confirm" type="submit" />
+        </div>  
     </form>
     )
 }
