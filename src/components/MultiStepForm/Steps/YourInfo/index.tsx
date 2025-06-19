@@ -7,9 +7,10 @@ interface YourInfoProps {
   name: string;
   email: string;
   phone: string;
-  currentStep: number;
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+  updateFormData: (newData: { name: string; email: string; phone: string }) => void;
 }
+
 
 type UserData = {
   name: string;
@@ -17,22 +18,21 @@ type UserData = {
   phone: string;
 };
 
-const PersonalInfoStep: React.FC<YourInfoProps> = (props) => {
+const YourInfoStep: React.FC<YourInfoProps> = ({ setCurrentStep, updateFormData, name, email, phone }) => {
   
-  const { setCurrentStep } = props;
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<UserData>({mode: 
-    'onSubmit'
+  } = useForm<UserData>({
+    defaultValues: {name, email, phone},
   });
-  
+
   const onSubmit = (data: UserData) => {
-    console.log('data', data);
+    updateFormData(data);
     setCurrentStep((prev: number) => prev + 1);
-  }
+  };
+
   
   return(
     <form className="personal-info" onSubmit={handleSubmit(onSubmit)}>
@@ -93,4 +93,4 @@ const PersonalInfoStep: React.FC<YourInfoProps> = (props) => {
   )
 }
 
-export default PersonalInfoStep;
+export default YourInfoStep;
