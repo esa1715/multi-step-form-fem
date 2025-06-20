@@ -1,8 +1,138 @@
-.progress-status {
+.addons {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    width: 28.125rem;
+    padding-top: 1.75rem;
+    gap: 2.5rem;
 }
 
-.progress-status p {
+.step-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.step-title h2 {
     color: #02295a;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.step-title p {
+    color: #9699ab;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.addons-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.addon-item {
+    display: flex;
+    padding: 1.5rem;
+    border: 1px solid #9699ab;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.25s ease;
+    transition: background-color 0.25s ease;
+}
+
+.addon-item:hover {
+    border-color: #473dff;
+}
+
+.checked {
+    background-color: #f0f5ff;
+    border-color: #473dff;
+}
+
+.addon-item label{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.addon-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #9699ab;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.addon-item input[type="checkbox"]:checked {
+  background-color: #473dff;
+  border: none;
+}
+
+.addon-item input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 9px;
+}
+
+.addon-item input[type="checkbox"]:checked::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='9' viewBox='0 0 12 9'><path fill='none' stroke='white' stroke-width='2' d='M1 4l3.433 3.433L10.866 1'/></svg>");
+}
+
+.addon-info h2{
+    color: #02295a;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.addon-info p {
+    color: #9699ab;
+
+}
+
+.addon-cost p{
+    color: #473dff;
+}
+
+
+@media screen and (max-width: 885px) {
+    .addons {
+        z-index: 1;
+        padding: 0;
+        position: absolute;
+        top: 17.5%;
+        background-color: #ffffff;
+        width: 90%;
+        border-radius: 10px;
+        padding: 2rem 1.25rem;
+        gap: 0.875rem;
+    }
+
+    .addon-item {
+        width: 100%;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .addon-item label {
+        gap: 1.25rem;
+    }
+
+    .addon-info h2{
+        font-size: 1rem;
+    }
+
+    .addon-info p,.addon-cost p {
+        font-size: 0.75rem;
+    }
 }

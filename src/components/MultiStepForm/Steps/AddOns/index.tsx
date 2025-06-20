@@ -1,35 +1,106 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import './AddOns.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
 import StepButton from "../../StepButton";
 
-
-type AddOnsProps = {
-  currentStep: number;
+interface AddOnsProps {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+  billingType: 'monthly' | 'yearly';
 };
 
-const AddOns: React.FC<AddOnsProps> = ({setCurrentStep}) => {
-
-    return(
-    <form className="personal-info">
-        <h2>Pick add-ons</h2>
-        <p>Add-ons help enhance your gaming experience.</p>
-        <div className="progress-status">
-          <FontAwesomeIcon icon={faGear} spin style={{color: " #9699ab",}} />
-          <p>Working in progress...</p>
-          <FontAwesomeIcon icon={faGear} spin style={{color: " #9699ab",}} />
-        </div>
-
-
-        
-        <div className="step-btns">
-          <StepButton variant="back" onClick={() => setCurrentStep((prev) => prev - 1)}/>
-          <StepButton variant="next" type="submit" />
-        </div>  
-    </form>
-    )
+type AddOn = {
+  title: string;
+  description: string;
+  monthly: {
+    price: number;
+  };
+  yearly: {
+    price: number;
+  }
 }
 
-export default AddOns;
+const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType }) => {
+  const addOns: AddOn[] = [
+    {
+      title: 'Online service',
+      description: 'Access to multiplayer games',
+      monthly: {
+        price: 1,
+      },
+      yearly: {
+        price: 10,
+      },
+    },
+    {
+      title: 'Larger storage',
+      description: 'Extra 1TB of cloud save',
+      monthly: {
+        price: 2,
+      },
+      yearly: {
+        price: 20,
+      },
+    },
+    {
+      title: 'Customizable profile',
+      description: 'Custom theme on your profile',
+      monthly: {
+        price: 2,
+      },
+      yearly: {
+        price: 20,
+      },
+    },
+  ];
+
+  const { register, watch } = useForm({
+    defaultValues: {
+      addons: [] as string[]
+    }
+  });
+
+  const selectedAddOns = watch("addons") as string[];
+
+  return (
+    <form className="addons">
+      <div className="step-title">
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience.</p>
+      </div>
+      <div className="addons-content">
+        {addOns.map((addOn) => {
+          const isChecked = selectedAddOns.includes(addOn.title);
+          return (
+            <div 
+              key={addOn.title} 
+              className={`addon-item ${isChecked ? 'checked' : ''}`}
+            >
+              <label htmlFor={addOn.title}>
+                <input
+                  type="checkbox"
+                  id={addOn.title}
+                  value={addOn.title}
+                  {...register("addons")}
+                />
+                <div className="addon-info">
+                  <h2>{addOn.title}</h2>
+                  <p>{addOn.description}</p>
+                </div>
+              </label>
+              <div className="addon-cost">
+                <p>+${billingType === 'monthly' ? addOn.monthly.price : addOn.yearly.price}{billingType === 'monthly' ? '/mo' : '/yr'}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="step-btns">
+        <StepButton variant="back" onClick={() => setCurrentStep((prev) => prev - 1)} />
+        <StepButton variant="next" type="submit" />
+      </div>
+    </form>
+  );
+}
+
+export default AddOnsStep;

@@ -6,13 +6,19 @@
     gap: 2.5rem;
 }
 
-.select-plan h2 {
+.step-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.step-title h2 {
     color: #02295a;
     font-size: 1.75rem;
     font-weight: 700;
 }
 
-.select-plan p {
+.step-title p {
     color: #9699ab;
     font-size: 1rem;
     font-weight: 400;
@@ -107,6 +113,7 @@
     .plan-option {
         flex-direction: row;
         width: 100%;
+        padding: 1rem;
     }
 
     .step-btns {

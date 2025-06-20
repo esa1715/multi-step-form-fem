@@ -70,6 +70,8 @@
     .step-nav {
         width: 100%;
         background-color: #eef5ff;
+        height: 0px;
+        min-height: 568px;
     }
     
     .bg-desktop {

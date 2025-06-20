@@ -2,14 +2,26 @@ import { useState } from "react"
 import StepNav from "./StepNav"
 import YourInfoStep from "./Steps/YourInfo";
 import SelectPlanStep from "./Steps/SelectPlan";
-import AddOns from "./Steps/AddOns";
+import AddOnsStep from "./Steps/AddOns";
 import Summary from "./Steps/Summary";
 import './MultiStepForm.css'
+
+type BillingType = 'monthly' | 'yearly';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  level: string;
+  billingType: BillingType;
+  price: number;
+}
+
 
 const MultiStepForm: React.FC = () => {
     const [currentStep, setCurrentStep] = useState(1);
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
         phone: '',
@@ -24,7 +36,7 @@ const MultiStepForm: React.FC = () => {
 
     const updateFormData = (newData: {
         level: string;
-        billingType: 'monthly' | 'yearly';
+        billingType: BillingType;
         price: number;
     }) => {
     setFormData(prev => ({ ...prev, ...newData }));
@@ -55,7 +67,14 @@ const MultiStepForm: React.FC = () => {
                 );
 
             case 3:
-                return <AddOns currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                return (
+                <AddOnsStep
+                    currentStep={currentStep}
+                    setCurrentStep={setCurrentStep}
+                    billingType={formData.billingType}
+                />
+                );
+
             case 4:
                 return <Summary currentStep={currentStep} setCurrentStep={setCurrentStep} />
         }
@@ -72,4 +91,4 @@ const MultiStepForm: React.FC = () => {
     );
 }
 
-export default MultiStepForm
+export default MultiStepForm;
