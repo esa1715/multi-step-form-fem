@@ -69,7 +69,6 @@ const MultiStepForm: React.FC = () => {
             case 3:
                 return (
                 <AddOnsStep
-                    currentStep={currentStep}
                     setCurrentStep={setCurrentStep}
                     billingType={formData.billingType}
                 />
