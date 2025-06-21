@@ -3,7 +3,7 @@ import StepNav from "./StepNav"
 import YourInfoStep from "./Steps/YourInfo";
 import SelectPlanStep from "./Steps/SelectPlan";
 import AddOnsStep from "./Steps/AddOns";
-import Summary from "./Steps/Summary";
+import SummaryStep from "./Steps/Summary";
 import './MultiStepForm.css'
 
 type BillingType = 'monthly' | 'yearly';
@@ -80,7 +80,7 @@ const MultiStepForm: React.FC = () => {
                 );
 
             case 4:
-                return <Summary currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                return <SummaryStep currentStep={currentStep} setCurrentStep={setCurrentStep} />
         }
     }
 

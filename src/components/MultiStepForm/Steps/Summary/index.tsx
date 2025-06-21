@@ -2,13 +2,14 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import StepButton from "../../StepButton";
+import './Summary.css'
 
 type SummaryProps = {
   currentStep: number;
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const Summary: React.FC<SummaryProps> = ({setCurrentStep}) => {
+const SummaryStep: React.FC<SummaryProps> = ({setCurrentStep}) => {
 
     return(
     <form className="personal-info">
@@ -30,4 +31,4 @@ const Summary: React.FC<SummaryProps> = ({setCurrentStep}) => {
     )
 }
 
-export default Summary;
+export default SummaryStep;

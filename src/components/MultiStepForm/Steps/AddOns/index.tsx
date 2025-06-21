@@ -104,7 +104,7 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateF
                   {...register("addons")}
                 />
                 <div className="addon-info">
-                  <h2>{addOn.title}</h2>
+                  <h3>{addOn.title}</h3>
                   <p>{addOn.description}</p>
                 </div>
               </label>
