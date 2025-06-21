@@ -38,5 +38,6 @@
     .next-btn, .back-btn, .confirm-btn {
         padding: 1rem;
         border-radius: 6px;
+        width: 105px;
     }
 }

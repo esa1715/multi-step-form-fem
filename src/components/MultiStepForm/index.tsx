@@ -15,6 +15,7 @@ interface FormData {
   level: string;
   billingType: BillingType;
   price: number;
+  addons: { title: string; priceText: string }[];
 }
 
 
@@ -28,6 +29,7 @@ const MultiStepForm: React.FC = () => {
         level: '',
         billingType: 'monthly',
         price: 0,
+        addons: [],
     });
 
     const handleUpdateFormData = (newData: { name: string; email: string; phone: string }) => {
@@ -71,6 +73,9 @@ const MultiStepForm: React.FC = () => {
                 <AddOnsStep
                     setCurrentStep={setCurrentStep}
                     billingType={formData.billingType}
+                    updateFormData={(data) =>
+                    setFormData((prev) => ({ ...prev, ...data }))
+                    }
                 />
                 );
 

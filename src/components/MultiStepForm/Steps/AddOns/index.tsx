@@ -6,6 +6,7 @@ import StepButton from "../../StepButton";
 interface AddOnsProps {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   billingType: 'monthly' | 'yearly';
+  updateFormData: (data: { addons: { title: string; priceText: string }[] }) => void;
 };
 
 type AddOn = {
@@ -19,7 +20,7 @@ type AddOn = {
   }
 }
 
-const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType }) => {
+const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateFormData }) => {
   const addOns: AddOn[] = [
     {
       title: 'Online service',
@@ -53,7 +54,7 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType }) => {
     },
   ];
 
-  const { register, watch } = useForm({
+  const { register, watch, handleSubmit } = useForm({
     defaultValues: {
       addons: [] as string[]
     }
@@ -61,8 +62,28 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType }) => {
 
   const selectedAddOns = watch("addons") as string[];
 
+  const onSubmit = (data: { addons: string[] }) => {
+  const selected = addOns
+    .filter(addOn => data.addons.includes(addOn.title))
+    .map(addOn => {
+      const price = billingType === 'monthly' ? addOn.monthly.price : addOn.yearly.price;
+      const suffix = billingType === 'monthly' ? '/mo' : '/yr';
+      return {
+        title: addOn.title,
+        priceText: `+${price}${suffix}`
+      };
+    });
+
+    console.log({ addons: selected });
+
+
+  updateFormData({ addons: selected });
+  setCurrentStep(prev => prev + 1);
+};
+
+
   return (
-    <form className="addons">
+    <form className="addons" onSubmit={handleSubmit(onSubmit)}>
       <div className="step-title">
         <h2>Pick add-ons</h2>
         <p>Add-ons help enhance your gaming experience.</p>
