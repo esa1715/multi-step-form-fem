@@ -7,6 +7,7 @@ interface AddOnsProps {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   billingType: 'monthly' | 'yearly';
   updateFormData: (data: { addons: { title: string; priceText: string }[] }) => void;
+  selectedAddOns: string[];
 };
 
 type AddOn = {
@@ -20,7 +21,7 @@ type AddOn = {
   }
 }
 
-const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateFormData }) => {
+const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateFormData, selectedAddOns }) => {
   const addOns: AddOn[] = [
     {
       title: 'Online service',
@@ -55,12 +56,13 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateF
   ];
 
   const { register, watch, handleSubmit } = useForm({
-    defaultValues: {
-      addons: [] as string[]
-    }
-  });
+  defaultValues: {
+    addons: selectedAddOns
+  }
+});
 
-  const selectedAddOns = watch("addons") as string[];
+
+  const watchedAddOns = watch("addons") as string[];
 
   const onSubmit = (data: { addons: string[] }) => {
   const selected = addOns
@@ -70,12 +72,9 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateF
       const suffix = billingType === 'monthly' ? '/mo' : '/yr';
       return {
         title: addOn.title,
-        priceText: `+${price}${suffix}`
+        priceText: `$${price}${suffix}`
       };
     });
-
-    console.log({ addons: selected });
-
 
   updateFormData({ addons: selected });
   setCurrentStep(prev => prev + 1);
@@ -90,7 +89,7 @@ const AddOnsStep: React.FC<AddOnsProps> = ({setCurrentStep, billingType, updateF
       </div>
       <div className="addons-content">
         {addOns.map((addOn) => {
-          const isChecked = selectedAddOns.includes(addOn.title);
+          const isChecked = watchedAddOns.includes(addOn.title);
           return (
             <div 
               key={addOn.title} 

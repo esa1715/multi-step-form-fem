@@ -99,7 +99,6 @@ const SelectPlanStep: React.FC<SelectPlanProps> = ({ setCurrentStep, updateFormD
     const level = selectedPlan.level;
 
     updateFormData({ level, billingType, price });
-    console.log({ level, billingType, price });
     setCurrentStep(prev => prev + 1);
   };
 

@@ -1,5 +1,131 @@
-.progress-status {
+.summary {
     display: flex;
+    flex-direction: column;
+    width: 28.125rem;
+    padding-top: 1.75rem;
+    gap: 2.5rem;
+}
+
+.step-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.step-title h2 {
+    color: #02295a;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.step-title p {
+    color: #9699ab;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.summary-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #f8f9fe;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.summary-level,.summary-addons {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.summary-level-info, .summary-addons-info {
+    display: flex;
+    flex-direction: column;
     gap: 0.25rem;
+}
+
+.summary-level-info p {
+    font-size: 1.125rem;
+    color: #02295a;
+    font-weight: 500;
+}
+
+.change {
+    color: #9699ab;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.25s ease;
+    font-size: 0.875rem;
+}
+
+.change:hover {
+    color: #473dff;
+}
+
+.summary-level-cost span {
+    color: #02295a;
+    font-weight: 700;
+}
+
+.summary-line {
+    width: 100%;
+    border: none; 
+    height: 1px; 
+    background-color: #d6d9e6;
+    border-radius: 10px;
+}
+
+.summary-addons-info span {
+    color: #9699ab;
+    font-size: 0.875rem;
+}
+
+.summary-addons-cost {
+    color: #02295a;
+    font-size: 0.875rem;
+}
+
+.summary-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.summary-value-text {
+    color: #9699ab;
+    font-weight: 500;
+}
+
+.total {
+    color: #473dff;
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+@media screen and (max-width: 885px) {
+    .summary {
+        z-index: 1;
+        padding: 0;
+        position: absolute;
+        top: 13%;
+        background-color: #ffffff;
+        width: 90%;
+        border-radius: 10px;
+        padding: 2rem 1.25rem;
+        gap: 1.5rem;
+    }
+
+    .step-title {
+        gap: 0.75rem;
+    }
+
+    .summary-itens, .summary-value {
+        padding: 1rem 0.75rem;
+    }
+
+    .total {
+        font-size: 1.125rem;
+    }
 }

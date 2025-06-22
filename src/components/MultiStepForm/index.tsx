@@ -71,16 +71,21 @@ const MultiStepForm: React.FC = () => {
             case 3:
                 return (
                 <AddOnsStep
-                    setCurrentStep={setCurrentStep}
                     billingType={formData.billingType}
-                    updateFormData={(data) =>
-                    setFormData((prev) => ({ ...prev, ...data }))
-                    }
+                    updateFormData={(data) => setFormData(prev => ({ ...prev, ...data }))}
+                    setCurrentStep={setCurrentStep}
+                    selectedAddOns={formData.addons.map(addon => addon.title)}
                 />
                 );
 
             case 4:
-                return <SummaryStep currentStep={currentStep} setCurrentStep={setCurrentStep} />
+                return (
+                <SummaryStep 
+                    currentStep={currentStep} 
+                    setCurrentStep={setCurrentStep}
+                    formData={formData}
+                />
+                );
         }
     }
 
