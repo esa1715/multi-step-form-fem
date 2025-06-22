@@ -67,7 +67,7 @@ const SummaryStep: React.FC<SummaryProps> = ({setCurrentStep, formData}) => {
 
         <div className="step-btns">
           <StepButton variant="back" onClick={() => setCurrentStep((prev) => prev - 1)}/>
-          <StepButton variant="confirm" type="submit" />
+          <StepButton variant="confirm" type="submit" onClick={() => setCurrentStep((prev) => prev + 1)}/>
         </div>  
     </form>
     )

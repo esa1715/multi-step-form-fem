@@ -5,6 +5,7 @@ import SelectPlanStep from "./Steps/SelectPlan";
 import AddOnsStep from "./Steps/AddOns";
 import SummaryStep from "./Steps/Summary";
 import './MultiStepForm.css'
+import SucessScreen from "./SucessScreen";
 
 type BillingType = 'monthly' | 'yearly';
 
@@ -86,6 +87,11 @@ const MultiStepForm: React.FC = () => {
                     formData={formData}
                 />
                 );
+
+            case 5:
+                return (
+                    <SucessScreen />
+                )
         }
     }
 
