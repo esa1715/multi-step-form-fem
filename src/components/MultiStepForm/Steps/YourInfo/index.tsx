@@ -46,42 +46,60 @@ const YourInfoStep: React.FC<YourInfoProps> = ({ setCurrentStep, updateFormData,
         <div className="user-input">
           <div className="user-input-info">
             <label htmlFor="name">Name</label>
-            {errors.name && <span className="input-error-msg">This field is required</span>}
+            {errors.name && <span className="input-error-msg">{errors.name.message}</span>}
           </div>
           <input 
             id="name"
             type="text"
             placeholder="e.g. Stephen King"
             className={errors.name ? "input-error" : "input"}
-            {...register('name', { required: true})}
+            {...register('name', {
+              required: 'This field is required',
+              pattern: {
+                value: /^[A-Za-zÀ-ÿ\s'-]{2,}$/,
+                message: 'Please enter a valid name',
+              },
+            })}
           />
         </div>
 
         <div className="user-input">
           <div className="user-input-info">
             <label htmlFor="email">Email Address</label>
-            {errors.email && <span className="input-error-msg">This field is required</span>}
+            {errors.email && <span className="input-error-msg">{errors.email.message}</span>}
           </div>
           <input 
             id="email"
             type="email"
             placeholder="e.g. stephenking@lorem.com"
             className={errors.email ? "input-error" : "input"}
-            {...register('email', { required: true})}
+            {...register('email', {
+              required: 'This field is required',
+              pattern: {
+                value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                message: 'Please enter a valid email address',
+              },
+            })}
           />
         </div>
 
         <div className="user-input">
           <div className="user-input-info">
             <label htmlFor="phone">Phone Number</label>
-            {errors.phone && <span className="input-error-msg">This field is required</span>}
+            {errors.phone && <span className="input-error-msg">{errors.phone.message}</span>}
           </div>
           <input 
             id="phone"
             type="tel"
             placeholder="e.g. +1 234 567 890"
             className={errors.phone ? "input-error" : "input"}
-            {...register('phone', { required: true})}
+            {...register('phone', {
+              required: 'This field is required',
+              pattern: {
+                value: /^\+?[0-9\s\-()]{7,}$/,
+                message: 'Please enter a valid phone number',
+              }
+            })}
           />
         </div>
         </div>
