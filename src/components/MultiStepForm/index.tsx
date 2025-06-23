@@ -98,6 +98,7 @@ const MultiStepForm: React.FC = () => {
 
     return (
         <main>
+            <h1 className="sr-only">MULTI-STEP FORM</h1>
             <StepNav currentStep={currentStep} setCurrentStep={setCurrentStep}/>
             <div className="step-container">
                 {renderStep()}
