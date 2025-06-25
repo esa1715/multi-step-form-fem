@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# Multi-Step Form (Frontend Mentor)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- ## Sumário
 
-Currently, two official plugins are available:
+- [Preview](#preview)
+- [Demo](#demo)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias usadas](#tecnologias-usadas)
+- [Autor](#autor)
+-->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Preview
 
-## Expanding the ESLint configuration
+![Preview do projeto](./src/assets/preview.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Demo
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" rel="noopener noreferrer">aqui</a>  para acessar o projeto online
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<!--## Funcionalidades-->
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+## Tecnologias usadas
+
+<img
+    align="left"
+    alt="React"
+    title="React" 
+    width="64px" 
+    style="padding-right: 16px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+/>
+
+<img
+    align="left"
+    alt="TypeScript"
+    title="TypeScript" 
+    width="64px" 
+    style="padding-right: 16px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"     
+/>
+
+<img 
+    alt="CSS" 
+    title="CSS"
+    width="64px" 
+    style="padding-right: 16px;"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
+/>
+
+## Autor
+
+<a href="https://portfolio-pessoal-alpha-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Erik Alves</a>
