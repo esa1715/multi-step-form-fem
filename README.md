@@ -9,19 +9,22 @@
 - [Autor](#autor)
 -->
 
-## Preview
+## 👀 Preview
 
 ![Preview do projeto](./src/assets/preview.png)
 
-## Demo
+## ▶️ Demo
 
 Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" rel="noopener noreferrer">aqui</a>  para acessar o projeto online
 
-<!--## Funcionalidades-->
+## ⚙️ Funcionalidades
+
+- 📱 **Layout 100% responsivo** adaptado para diferentes tamanhos de tela
 
 
 
-## Tecnologias usadas
+
+## 🛠️ Tecnologias usadas
 
 <img
     align="left"
@@ -49,6 +52,6 @@ Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" re
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
 />
 
-## Autor
+## 👨‍💻 Autor
 
 <a href="https://portfolio-pessoal-alpha-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Erik Alves</a>
