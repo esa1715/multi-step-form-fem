@@ -19,7 +19,7 @@ Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" re
 
 ## ⚙️ Funcionalidades
 
-- ✅ **Validação de campos** obrigatórios (nome, e-mail e telefone) com React Hook Form
+- ✅ **Validação de campos obrigatórios** (nome, e-mail e telefone) com React Hook Form
 - 📦 **Seleção de plano** entre três opções com alternância entre assinatura mensal e anual
 - ➕ **Possibilidade de adicionar complementos** (add-ons), com valores dinâmicos conforme a escolha anterior
 - 🧾 Tela de resumo com todas as informações escolhidas e valor total da assinatura
