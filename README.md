@@ -24,7 +24,7 @@ Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" re
 
 
 
-## 🛠️ Tecnologias usadas
+## 💻 Tecnologias usadas
 
 <img
     align="left"
