@@ -1,17 +1,8 @@
-# Multi-Step Form (Frontend Mentor)
+# 📝 Multi-Step Form (Frontend Mentor)
 
 Este projeto foi desenvolvido como parte de um desafio da [Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Consiste em um formulário multi-etapas dividido em quatro fases, simulando um fluxo de cadastro real utilizado em aplicações modernas. 
 
 Cada etapa coleta diferentes tipos de informações, garantindo uma experiência fluida e organizada para o usuário. Para o gerenciamento dos inputs e validações, foi utilizado o React Hook Form, o que garante maior performance e flexibilidade na manipulação dos dados. O layout é adaptável a diferentes tamanhos de tela, proporcionando uma navegação intuitiva tanto em dispositivos móveis quanto em desktops.
-
-<!-- ## Sumário
-
-- [Preview](#preview)
-- [Demo](#demo)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias usadas](#tecnologias-usadas)
-- [Autor](#autor)
--->
 
 ## 👀 Preview
 
@@ -60,3 +51,4 @@ Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" re
 ## 👨‍💻 Autor
 
 <a href="https://portfolio-pessoal-alpha-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Erik Alves</a>
+
