@@ -1,6 +1,6 @@
 # 📝 Multi-Step Form (Frontend Mentor)
 
-Este projeto foi desenvolvido como parte do desafio [Multi-step form](https://www.frontendmentor.io/solutions/multi-step-form-using-react-hook-form-OYa4qkQunZ) da [Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Consiste em um formulário multi-etapas dividido em quatro fases, simulando um fluxo de cadastro real utilizado em aplicações modernas. 
+Este projeto foi desenvolvido como parte do desafio [Multi-step form](https://www.frontendmentor.io/solutions/multi-step-form-using-react-hook-form-OYa4qkQunZ) da [Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Consiste em um formulário multi-etapas dividido em quatro passos, simulando um fluxo de cadastro real utilizado em aplicações modernas. 
 
 Cada etapa coleta diferentes tipos de informações, garantindo uma experiência fluida e organizada para o usuário. Para o gerenciamento dos inputs e validações, foi utilizado o React Hook Form, o que garante maior performance e flexibilidade na manipulação dos dados. O layout é adaptável a diferentes tamanhos de tela, proporcionando uma navegação intuitiva tanto em dispositivos móveis quanto em desktops.
 
