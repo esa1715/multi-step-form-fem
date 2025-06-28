@@ -9,6 +9,25 @@ Este projeto foi desenvolvido como parte do desafio [Multi-step form](https://ww
 
 Cada etapa coleta diferentes tipos de informações, garantindo uma experiência fluida e organizada para o usuário. Para o gerenciamento dos inputs e validações, foi utilizado o React Hook Form, o que garante maior performance e flexibilidade na manipulação dos dados. O layout é adaptável a diferentes tamanhos de tela, proporcionando uma navegação intuitiva desde dispositivos móveis até desktops.
 
+## 🎯 O Desafio
+
+Os usuários devem ser capazes de:
+
+- Completar cada etapa da sequência
+
+- Voltar para uma etapa anterior para atualizar suas seleções
+
+- Ver um resumo das suas seleções na etapa final e confirmar seu pedido
+
+- Visualizar o layout ideal para a interface dependendo do tamanho da tela do dispositivo
+
+- Ver os estados de hover e focus para todos os elementos interativos na página
+
+- Receber mensagens de validação de formulário se:
+  - Um campo for deixado em branco
+  - O endereço de e-mail não estiver formatado corretamente
+  - Uma etapa for enviada, mas nenhuma seleção for feita
+
 ## 👀 Preview
 
 ![Preview do projeto](./src/assets/preview.png)
