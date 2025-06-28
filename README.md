@@ -1,5 +1,10 @@
 # 📝 Multi-Step Form (Frontend Mentor)
 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
 Este projeto foi desenvolvido como parte do desafio [Multi-step form](https://www.frontendmentor.io/solutions/multi-step-form-using-react-hook-form-OYa4qkQunZ) da [Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Consiste em um formulário multi-etapas dividido em quatro passos, simulando um fluxo de cadastro real utilizado em aplicações modernas. 
 
 Cada etapa coleta diferentes tipos de informações, garantindo uma experiência fluida e organizada para o usuário. Para o gerenciamento dos inputs e validações, foi utilizado o React Hook Form, o que garante maior performance e flexibilidade na manipulação dos dados. O layout é adaptável a diferentes tamanhos de tela, proporcionando uma navegação intuitiva desde dispositivos móveis até desktops.
@@ -20,35 +25,12 @@ Clique <a href="https://multi-step-form-fem-nine.vercel.app/" target="_blank" re
 - 🧾 **Tela de resumo** com todas as informações escolhidas e valor total da assinatura
 - 📱 **Layout 100% responsivo** adaptado para diferentes tamanhos de tela
 
-## 💻 Tecnologias usadas
-
-<img
-    align="left"
-    alt="React"
-    title="React" 
-    width="64px" 
-    style="padding-right: 16px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-/>
-
-<img
-    align="left"
-    alt="TypeScript"
-    title="TypeScript" 
-    width="64px" 
-    style="padding-right: 16px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"     
-/>
-
-<img 
-    alt="CSS" 
-    title="CSS"
-    width="64px" 
-    style="padding-right: 16px;"
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
-/>
-
 ## 👨‍💻 Autor
 
-<a href="https://portfolio-pessoal-alpha-nine.vercel.app/" target="_blank" rel="noopener noreferrer">Erik Alves</a>
+### **Erik Alves**
 
+[![Frontend Mentor](https://img.shields.io/badge/Frontend_Mentor-%233F54A3.svg?style=for-the-badge&logo=frontendmentor&logoColor=white)](https://www.frontendmentor.io/profile/esa1715)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/u/0/?fs=1&to=silvalveserik1@gmail.com&su=Portf%C3%B3lio+pessoal+&tf=cm)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erikalves12)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://portfolio-pessoal-alpha-nine.vercel.app/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://api.whatsapp.com/send/?phone=%2B5511933329021&text&type=phone_number&app_absent=0)
