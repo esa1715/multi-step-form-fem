@@ -3,7 +3,6 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 Este projeto foi desenvolvido como parte do desafio [Multi-step form](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ) da [Frontend Mentor](https://www.frontendmentor.io/home). Consiste em um formulário multi-etapas dividido em quatro passos, simulando um fluxo de cadastro real utilizado em aplicações modernas. 
 
